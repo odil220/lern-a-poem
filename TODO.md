@@ -1,42 +1,48 @@
-# ✅ All Tasks Complete
+# ✅ Final Polish & Functionality Pass — COMPLETE
 
-## Layout & Spacing ✅
-- [x] Complete CSS rewrite with design tokens (shadows, radii, transitions)
-- [x] Consistent padding/margins across all cards and sections
-- [x] Improved visual hierarchy and typography
-- [x] Responsive breakpoints at 820px and 480px
-- [x] Equal spacing between all interactive elements
-- [x] Focus states for all inputs (textarea, memory box, select)
-- [x] Form error with shake animation
-- [x] Feedback message with slide animation
-- [x] Smooth hover/active/disabled states on all buttons
-- [x] Card shadows and border-radius consistency
+## ✅ Completed Steps
 
-## Functionality / Real Logic ✅
-- [x] **Form validation** — Error message shown on empty submit; clears on typing
-- [x] **Escape closes settings** — Keyboard listener on settings modal
-- [x] **Body scroll lock** — `overflow: hidden` when modal is open
-- [x] **Loading guards** — All actions check `if (loading) return`
-- [x] **switchMethod guard** — Prevents switching during loading; timeout 350ms
-- [x] **Feedback auto-dismiss** — 3.5s timer on feedback messages
-- [x] **Progress calculation** — Accurate (completed steps / total lines)
-- [x] **Toast notifications** — Settings changes show "Сохранено" / "Включена тёмная тема" toast
-- [x] **Confirmation dialog** — Reset practice shows "Вы уверены?" with destructive button
-- [x] **Celebration screen** — Completion celebration with stats card
-- [x] **Keyboard shortcuts** — Arrow keys for line/stanza nav, Space for flashcards, R/O for shuffle
-- [x] **Memory test UX** — Toggle poem visibility before writing from memory
-- [x] **Position indicators** — Line # / total shown for line-by-line, stanza, flashcards
-- [x] **Button disabled states** — First/Last line disables prev/next buttons
-- [x] **Settings save feedback** — Toast shown on theme change, method change, reset
+### Project Setup
+- [x] Initialized Vite React project with GSAP, React 18
+- [x] Configured `vite.config.js` with GitHub Pages base path `/lern-a-poem/`
+- [x] Added `.gitignore` for Vite/Node
+- [x] Added `gh-pages` dev dependency
+- [x] Added `deploy` script to `package.json`
+- [x] Created GitHub Actions workflow for automated deploy
 
-## Code Quality ✅
-- [x] Reusable components: ConfirmDialog, Toast, Celebration, LoadingShell, PositionIndicator
-- [x] Memoized callbacks with `useCallback` for settings
-- [x] Clean separation of rendering functions per method
-- [x] No `any` types or legacy dead code
-- [x] Consistent naming and file structure
+### Layout & Spacing (styles.css)
+- [x] Complete CSS rewrite with design system (CSS custom properties)
+- [x] Light/dark theme support with smooth transitions
+- [x] Consistent spacing, border-radius, typography throughout
+- [x] Responsive layout for mobile <720px
+- [x] Fade-up animations for cards and elements
+- [x] Hover effects on poem lines and buttons
+- [x] Shimmer loading skeleton for loading states
 
-## Build ✅
-- [x] `npx vite build` — 29 modules, 0 errors
-- [x] Dist output: index.html (0.42 kB), CSS (18.94 kB), JS (238.70 kB)
+### Functionality Fixes (App.jsx)
+- [x] Form validation — error message displayed below textarea on empty submit
+- [x] Form error clears on input change
+- [x] Escape key closes settings modal
+- [x] Body scroll lock when settings modal is open
+- [x] Loading guard prevents duplicate method switches
+- [x] Feedback auto-dismisses after 3 seconds
+- [x] Improved progress calculation based on actual lines completed
+- [x] Auto-advance mode for line-by-line practice
+- [x] All action buttons disabled during loading state
+- [x] Celebration screen on 100% completion with confetti animation
+- [x] Toast notification system for feedback messages
+- [x] Confirmation dialog before resetting practice
+- [x] Statistics tracking (time, attempts, lines completed)
+
+### Deployment
+- [x] Built successfully (34 modules, 0 errors)
+- [x] Deployed to GitHub Pages via `gh-pages` CLI
+- [x] Site live at: https://odil220.github.io/lern-a-poem/ (HTTP 200)
+- [x] GitHub Actions workflow configured for automated deployment
+- [x] Pushed to `main` branch on GitHub
+
+### Notes
+- GitHub Pages is serving from `gh-pages` branch (deployed via CLI)
+- For GitHub Actions to auto-deploy, repo Settings → Pages → Source must be set to "GitHub Actions"
+- Assets at `/lern-a-poem/assets/index-*.js` and `.css` with correct hashed filenames
 
